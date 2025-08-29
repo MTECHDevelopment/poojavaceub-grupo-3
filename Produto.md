@@ -8,13 +8,14 @@ classDiagram
     - cor: string
     - marca: string
     - estado: string
+    - saberPreco(): float
 }
   class Corda {
     - numeroCordas: int
     - 
 }
   class Metal {
-    
+    - 
 }
   class Percussao {
     
