@@ -7,8 +7,3 @@ classDiagram
     + cumprimentar(): void
 }
 ```
-```mermaid
-- markdown
-class Diagram
-  class Estoque
-```
