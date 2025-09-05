@@ -8,17 +8,21 @@ classDiagram
     - email: string
     - dtNascimento: date
     - sexo: string
+    + atualizarEmail(novoEmail: string) : boolean
+    + atualizarTelefone(novoTelefone: string) : boolean
   }
   class Cliente{
     - idCliente: int
     - endereco: string
-    + fazerPedido(pedido: Pedido) : : void
+    + fazerPedido(pedido: Pedido) : void
+    + atualizarEndereco(novoEndereco: string) : boolean
   }
   class Funcionario{
     - matricula: string
     - salario: float
     - cargo: string
-    + cadastrarProduto(produto: Produto) : : void
+    + cadastrarProduto(produto: Produto) : void
+    + consultarCliente(idCliente: int) : string
   }
   
 
