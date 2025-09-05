@@ -1,6 +1,6 @@
 ```mermaid
 classDiagram
-   class ItemVenda {
+   class Venda {
       - idVenda: int
       - dataVenda: date
       - quantidade: int
