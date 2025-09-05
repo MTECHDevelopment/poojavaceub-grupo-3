@@ -2,7 +2,7 @@
 ```mermaid
 classDiagram
   class Pessoa {
-    - nome> string
+    - nome: string
     - idade: int
     + cumprimentar(): void
 }
