@@ -4,7 +4,6 @@ classDiagram
   class Fornecedor{
     - idFornecedor: int
     - Fornecedor: string
-    - funcionarios: string
   }
 
 ```
