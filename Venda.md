@@ -1,7 +1,7 @@
 ```mermaid
 class Diagram
-class ItemVenda {
-      - quantidade: int
-      - subtotal: float
-  }
+      class ItemVenda {
+            - quantidade: int
+            - subtotal: float
+      }
 ```
