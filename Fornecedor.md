@@ -2,8 +2,9 @@
 ```mermaid
 classDiagram
   class Fornecedor{
-    - idFornecedor: int
-    - Fornecedor: string
+    - idFormecedor: int
+    - fornecedor: string
+    - cnpj: string
   }
 
 ```
