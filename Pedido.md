@@ -7,7 +7,9 @@ classDiagram
     - funcionario: string
     - cliente: string
     - status: string
-    + cancelarPedido(): boolean
+    - dataPrevisaoEntrega: Date
+    + cancelarPedido() : boolean
+    + saberDataPrevisaoEntrega() : date
   }
 
 ```
