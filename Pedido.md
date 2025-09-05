@@ -6,6 +6,7 @@ classDiagram
     - dataPedido: date
     - funcionario: string
     - cliente: string
+    - status: string
   }
 
 ```
