@@ -11,11 +11,14 @@ classDiagram
   }
   class Cliente{
     - idCliente: int
+    - endereco: string
+    + fazerPedido(pedido: Pedido): void
   }
   class Funcionario{
     - matricula: string
     - salario: float
     - cargo: string
+    + cadastrarProduto(produto: Produto): void
   }
   
 
