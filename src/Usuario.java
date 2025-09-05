@@ -8,16 +8,14 @@ public class Usuario {
     // função construtora
     public Usuario(String login, String abacaxi, String email) {
         this.login = login;
-        if (abacaxi.length>8){
-            this.senha = abacaxi;
-        }
+        this.senha = abacaxi;
         this.email = email;
     }
 
-    public mudarSenha(String senhaNova){
-        this.senha = senhanova;
+    public void mudarSenha(String senhaNova){
+        this.senha = senhaNova;
     }
     public String getSenha(){
-        return this.senha
+        return this.senha;
     }
 }
