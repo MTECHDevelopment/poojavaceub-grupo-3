@@ -1,10 +1,10 @@
 ```mermaid
 class Diagram
       class ItemVenda {
-            -int quantidade
-            -float subtotal
+            - quantidade: int
+            - subtotal: float
         }
 
-Venda "1" -- "0..*" ItemVenda
-Produto "1" -- "0..*" ItemVenda
+Venda <|-- ItemVenda
+Produto <|-- ItemVenda
 ```
