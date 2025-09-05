@@ -5,5 +5,7 @@ classDiagram
       - dataVenda: date
       - quantidade: int
       - totalVenda: float
+      + saberQtd(): int
+      + saberTotalVenda(): float
 }
 ```
