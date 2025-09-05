@@ -7,7 +7,7 @@ classDiagram
     - telefone: string
     - cnpj: string
     + saberTelefone() : : string
-    + solicitarOrcamento() : : float
+    + solicitarOrcamento(Produto: string) : : float
   }
 
 ```
