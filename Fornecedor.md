@@ -5,6 +5,7 @@ classDiagram
     - idFormecedor: int
     - fornecedor: string
     - cnpj: string
+    + solicitarOrcamento() : : float
   }
 
 ```
