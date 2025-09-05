@@ -4,22 +4,22 @@ classDiagram
     - idProduto: int
     - nome: string
     - preco: float
-    - descricao: string
-    - estoque: int
-    + saberNome(): string
-    + saberDescricao(): string
-    + saberPreco(): float
-    + verificarEstoque(): int
-}
-  class Instrumento {
     - cor: string
     - marca: string
     - modelo: string
-    - estado: string
-    - tamanho: float
+    - descricao: string
+    - estoque: int
+    + saberNome(): string
+    + saberPreco(): float
     + saberCor(): string
     + saberMarca(): string
     + saberModelo(): string
+    + saberDescricao(): string
+    + verificarEstoque(): int
+}
+  class Instrumento {
+    - estado: string
+    - tamanho: float
     + saberEstado(): string
     + saberTamanho(): float
 }
