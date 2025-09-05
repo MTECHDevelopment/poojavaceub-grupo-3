@@ -23,6 +23,7 @@ classDiagram
     - cargo: string
     + cadastrarProduto(produto: Produto) : void
     + consultarCliente(idCliente: int) : string
+    + fazerVenda(venda: Venda) : void
   }
   
 
