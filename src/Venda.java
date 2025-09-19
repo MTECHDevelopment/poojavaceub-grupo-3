@@ -19,7 +19,7 @@ public class Venda {
         itens.add(item);
         calcularTotal();
     }
-    public double calcularTotal () {
+    public void calcularTotal() {
         valorTotal = 0;
         for (ItemVenda item : itens) {
             valorTotal += item.getSubtotal();
@@ -33,4 +33,6 @@ public class Venda {
             System.out.println("Quantidade: " + item.getQuantidade() + " | Subtotal: R$ " + item.getSubtotal());
         }
     }
+
+    public int getId() { return id; }
 }

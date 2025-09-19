@@ -31,9 +31,9 @@ public class Funcionario {
         return v;
     }
 
-    public Venda consultarVenda(int idVenda) {
+    public Venda consultarVenda(int id) {
         for (Venda v : vendas) {
-            if (v.getId() == idVenda) return v;
+            if (v.getId() == id) return v;
         }
         return null;
     }
