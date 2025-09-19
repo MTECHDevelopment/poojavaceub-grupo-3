@@ -25,5 +25,12 @@ public class Venda {
             valorTotal += item.getSubtotal();
         }
     };
-    public double getValorTotal() { return valorTotal; };
+    public double getValorTotal() { return valorTotal; }
+
+    public void exibirItens() {
+        for (ItemVenda item : itens) {
+            item.getProduto().exibirDetalhes();
+            System.out.println("Quantidade: " + item.getQuantidade() + " | Subtotal: R$ " + item.getSubtotal());
+        }
+    }
 }

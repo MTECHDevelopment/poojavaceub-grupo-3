@@ -15,4 +15,5 @@ public class ItemVenda {
 
     public Produto getProduto() { return produto; }
     public int getQuantidade() { return quantidade; }
+    public double getSubtotal() { return subtotal; }
 }
