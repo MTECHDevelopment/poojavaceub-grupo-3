@@ -24,7 +24,7 @@ public class Venda {
         for (ItemVenda item : itens) {
             valorTotal += item.getSubtotal();
         }
-    };
+    }
     public double getValorTotal() { return valorTotal; }
 
     public void exibirItens() {
