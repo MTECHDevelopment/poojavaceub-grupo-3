@@ -1,27 +1,38 @@
 import java.util.ArrayList;
 
 public class Funcionario{
+    private int id;
     private String nome;
     private double salario;
+    private String matricula;
     private ProdutoRepository repo = new ProdutoRepository();
 
     public Funcionario(String x, double y){
         this.nome = x;
         this.salario = y;
     }
+
+    public int getId() {
+        return id;
+    }
+
     public String getNome(){
-            return nome;
+        return nome;
     }
     public double getSalario(){
         return salario;
     }
 
+    public void setId(int id) {
+        this.id = novoId;
+    }
+
     public void setSalario(double novoSalario){
-        this.salario= novoSalario;
+        this.salario = novoSalario;
 
     }
     public void setNome(String novoNome){
-        this.nome= novoNome;
+        this.nome = novoNome;
     }
 
     public void cadastrarProduto(String nome, double preco){
