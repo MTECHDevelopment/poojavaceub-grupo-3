@@ -104,6 +104,27 @@ public class Loja {
               break;
           }
           break;
+        case 1: // Cadastrar Funcionário
+    entrada.nextLine(); // Limpar buffer
+    
+    System.out.print("Digite o nome: ");
+    String nome = entrada.nextLine();
+    
+    System.out.print("Digite o salário: ");
+    double salario = entrada.nextDouble();
+    entrada.nextLine(); // Limpar buffer
+    
+    System.out.print("Digite a matrícula: ");
+    String matricula = entrada.nextLine();
+    
+    Funcionario novoFunc = new Funcionario(nome, salario, matricula);
+    Funcionario funcCadastrado = funcRepo.adicionar(novoFunc);
+    
+    // MENSAGEM DE SUCESSO
+    System.out.println("\n✓ Funcionário cadastrado com sucesso!");
+    System.out.println("ID gerado: " + funcCadastrado.getId());
+    System.out.println("Nome: " + funcCadastrado.getNome());
+    break;
         case 2:
           // gerenciar produtos
           // SUBMENU produtos
@@ -145,6 +166,28 @@ public class Loja {
           }
 
           break;
+       
+        case 2: // Listar
+    ArrayList<Funcionario> lista = funcRepo.listar();
+    
+    if (lista.isEmpty()) {
+        // MENSAGEM DE AVISO
+        System.out.println("\nℹ Nenhum funcionário cadastrado ainda.");
+    } else {
+        // MENSAGEM DE SUCESSO
+        System.out.println("\n===== LISTA DE FUNCIONÁRIOS =====");
+        for (int i = 0; i < lista.size(); i++) {
+            Funcionario f = lista.get(i);
+            System.out.println("\nFuncionário #" + (i+1));
+            System.out.println("ID: " + f.getId());
+            System.out.println("Nome: " + f.getNome());
+            System.out.println("Salário: R$ " + f.getSalario());
+            System.out.println("Matrícula: " + f.getMatricula());
+            System.out.println("----------------------------");
+        }
+    }
+    break;
+        
         case 3:
           // gerenciar clientes
           // SUBMENU clientes
@@ -186,6 +229,24 @@ public class Loja {
           }
 
           break;
+          case 3: // Buscar por ID
+    System.out.print("Digite o ID: ");
+    int id = entrada.nextInt();
+    
+    Funcionario encontrado = funcRepo.buscarPorId(id);
+    
+    if (encontrado != null) {
+        // MENSAGEM DE SUCESSO
+        System.out.println("\n✓ Funcionário encontrado:");
+        System.out.println("ID: " + encontrado.getId());
+        System.out.println("Nome: " + encontrado.getNome());
+        System.out.println("Salário: R$ " + encontrado.getSalario());
+        System.out.println("Matrícula: " + encontrado.getMatricula());
+    } else {
+        // MENSAGEM DE ERRO
+        System.out.println("\n✗ ERRO: Funcionário com ID " + id + " não encontrado.");
+    }
+    break;
         case 4:
           // cadastrar cliente
           // SUBMENU CADASTRO CLIENTES
@@ -241,6 +302,53 @@ public class Loja {
                 
               }
               break;
+            case 5: // Atualizar
+    System.out.print("Digite o ID do funcionário: ");
+    int idAtualizar = entrada.nextInt();
+    entrada.nextLine();
+    
+    // Verifica se existe
+    Funcionario funcExiste = funcRepo.buscarPorId(idAtualizar);
+    if (funcExiste == null) {
+        // MENSAGEM DE ERRO
+        System.out.println("\n✗ ERRO: Funcionário com ID " + idAtualizar + " não encontrado.");
+        break;
+    }
+    
+    System.out.print("Novo nome: ");
+    String novoNome = entrada.nextLine();
+    System.out.print("Novo salário: ");
+    double novoSalario = entrada.nextDouble();
+    entrada.nextLine();
+    System.out.print("Nova matrícula: ");
+    String novaMatricula = entrada.nextLine();
+    
+    boolean atualizado = funcRepo.atualizarPorId(idAtualizar, novoNome, novoSalario, novaMatricula);
+    
+    if (atualizado) {
+        // MENSAGEM DE SUCESSO
+        System.out.println("\n✓ Funcionário atualizado com sucesso!");
+    } else {
+        // MENSAGEM DE ERRO
+        System.out.println("\n✗ ERRO: Não foi possível atualizar o funcionário.");
+    }
+    break;
+
+    case 6: // Excluir
+    System.out.print("Digite o ID do funcionário a excluir: ");
+    int idExcluir = entrada.nextInt();
+    
+    boolean removido = funcRepo.removerPorId(idExcluir);
+    
+    if (removido) {
+        // MENSAGEM DE SUCESSO
+        System.out.println("\n✓ Funcionário excluído com sucesso!");
+    } else {
+        // MENSAGEM DE ERRO
+        System.out.println("\n✗ ERRO: Funcionário com ID " + idExcluir + " não encontrado.");
+    }
+    break;
+
             case 0:
               // Voltar ao menu principal
               break;
