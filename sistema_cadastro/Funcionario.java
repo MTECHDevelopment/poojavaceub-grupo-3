@@ -7,9 +7,11 @@ public class Funcionario{
     private String matricula;
     private ProdutoRepository repo = new ProdutoRepository();
 
-    public Funcionario(String x, double y){
-        this.nome = x;
-        this.salario = y;
+    public Funcionario(int id, String nome, double salario, String matricula){
+        this.id = id;
+        this.nome = nome;
+        this.salario = salario;
+        this.matricula = matricula;
     }
 
     public int getId() {
@@ -23,7 +25,11 @@ public class Funcionario{
         return salario;
     }
 
-    public void setId(int id) {
+    public String getMatricula(){
+        return matricula;
+    }
+
+    public void setId(int novoId) {
         this.id = novoId;
     }
 
@@ -35,18 +41,19 @@ public class Funcionario{
         this.nome = novoNome;
     }
 
-    public void cadastrarProduto(String nome, double preco){
-        Produto p = new Produto(nome, preco);
-        repo.adicionar(p);
+    public void setMatricula(String novaMatricula){
+        this.matricula = novaMatricula;
+    }
+
+    public void cadastrarProduto(int id, String nome, double preco, int quantidadeEmEstoque){
+        Produto p = new Produto(id, nome, preco, quantidadeEmEstoque);
+        repo.adicionarProduto(p);
         p.exibirInfo();
-        System.out.println(repo.listar());
+        System.out.println(repo.listarProdutos());
     }
 
     public void consultarProduto(String nome) {
-        Produto p = repo.buscarPorNome(nome);
+        Produto p = repo.buscarPorNomeProduto(nome);
         System.out.printf("Dados do produto %s %d", p.getNome(), p.getPreco());
     }
-
-
-
 }

@@ -4,16 +4,17 @@ public class ProdutoRepository {
     private ArrayList<Produto> produtos = new ArrayList<Produto>();
 
     // CREATE
-    public void adicionar(Produto p) {
+    public void adicionarProduto(Produto p) {
         produtos.add(p);
+        System.out.printf("Produto %s adicionado com sucesso.\n", p.getNome());
     }
 
     // READ (listar todos)
-    public ArrayList<Produto> listar() {
+    public ArrayList<Produto> listarProdutos() {
         return produtos; // simples (em produção, prefira devolver cópia)
     }
     
-    public Produto buscarPorNome(String nome) {
+    public Produto buscarPorNomeProduto(String nome) {
         for (int i = 0; i < produtos.size(); i++) {
             Produto p = produtos.get(i);         
             if (p.getNome().equals(nome)) {
@@ -23,8 +24,18 @@ public class ProdutoRepository {
         return null;
     }
 
+    public Produto buscarPorIdProduto(int id) {
+        for (int i = 0; i < produtos.size(); i++) {
+            Produto p = produtos.get(i);
+            if (p.getId() == id) {
+                return p;
+            }
+        }
+        return null;
+    }
+
     // UPDATE
-    public boolean atualizar(String nomeAtual,String novoNome, double novoPreco) {
+    public boolean atualizarProduto(String nomeAtual,String novoNome, double novoPreco) {
         for (int i = 0; i < produtos.size(); i++) {
             Produto p = produtos.get(i);
             if (p.getNome().equals(nomeAtual)) { 
@@ -39,8 +50,21 @@ public class ProdutoRepository {
 
     }
 
+    public boolean atualizarPorIdProduto(int id, String novoNome, double novoPreco) {
+        for (int i = 0; i < produtos.size(); i++) {
+            Produto p = produtos.get(i);
+            if (p.getId() == id) {
+                p.setNome(novoNome);
+                p.setPreco(novoPreco);
+                produtos.set(i, p);
+                return true;
+            }
+        }
+        return false;
+    }
+
     // DELETE
-    public boolean removerPorNome(int nome) {
+    public boolean removerPorNomeProduto(String nome) {
         for (int i = 0; i < produtos.size(); i++) {
             if (produtos.get(i).getNome().equals(nome)) {
                 produtos.remove(i); // remove pelo índice
@@ -49,4 +73,15 @@ public class ProdutoRepository {
         }
         return false;
     }
+
+    public boolean removerPorIdProduto(int id) {
+        for (int i = 0; i < produtos.size(); i++) {
+            if (produtos.get(i).getId() == id) {
+                produtos.remove(i); // remove pelo índice
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
