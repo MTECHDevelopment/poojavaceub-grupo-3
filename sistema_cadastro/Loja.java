@@ -50,36 +50,19 @@ public class Loja {
           switch (opcaoMenuFuncionario) {
             case 1:
               // Cadastrar Funcionário
-              System.out.println("Deseja cadastrar um funcionário?");
-              String respostaFuncionario = entrada.nextLine();
+              System.out.println("Qual seu id do funcionario? ");
+              String idFunc = entrada.nextLine();
 
-              while (respostaFuncionario.equals("sim") || respostaFuncionario.equals("Sim") || respostaFuncionario.equals("SIM") || respostaFuncionario.equals("s") || respostaFuncionario.equals("S")) {
-                System.out.println("Qual o id do funcionário? ");
-                String idFuncionario = entrada.nextLine(); 
-                System.out.println("Qual o nome do funcionário? ");
-                String nomeFuncionario = entrada.nextLine();        
-                System.out.println("Qual o salário do funcionário? ");
-                String salarioFuncionario = entrada.nextLine();
-                System.out.println("Qual a matrícula do funcionário? ");
-                String matriculaFuncionario = entrada.nextLine();
+              System.out.println("Qual seu nome? ");
+              String nome = entrada.nextLine();        
 
-                Funcionario f = new Funcionario(Integer.parseInt(idFuncionario), nomeFuncionario, Double.parseDouble(salarioFuncionario), matriculaFuncionario);
-                func.adicionarFuncionario(f);
+              System.out.println("Qual seu Salario? ");
+              String salario = entrada.nextLine();
+              
+              System.out.println("Qual a sua matricula? ");
+              String matricula = entrada.nextLine();
 
-                System.out.println("Deseja cadastrar mais um? ");
-                respostaFuncionario = entrada.nextLine();
-              }
-
-                String preco = entrada.nextLine();
-                System.out.println("Qual a quantidade em estoque? ");
-                String quantidadeEmEstoque = entrada.nextLine();          
-                func.cadastrarProduto(Integer.parseInt(idProduto), produto, Double.parseDouble(preco), Integer.parseInt(quantidadeEmEstoque));
-                
-                System.out.println("Deseja cadastrar mais um? ");
-                String nomeproduto = entrada.nextLine();    
-                func.consultarProduto(nomeproduto);
-                
-              }            
+              Funcionario func = new Funcionario(Integer.parseInt(idFunc), nome, Double.parseDouble(salario), matricula);          
               break;
             case 2:
               // Listar Funcionário
@@ -255,21 +238,6 @@ public class Loja {
           break;
         } 
       } while (opcaoPrincipal != 0);
-
-
-      System.out.println("Qual seu id do funcionario? ");
-      String idFunc = entrada.nextLine();
-
-      System.out.println("Qual seu nome? ");
-      String nome = entrada.nextLine();        
-
-      System.out.println("Qual seu Salario? ");
-      String salario = entrada.nextLine();
-      
-      System.out.println("Qual a sua matricula? ");
-      String matricula = entrada.nextLine();
-
-      Funcionario func = new Funcionario(Integer.parseInt(idFunc), nome, Double.parseDouble(salario), matricula);
 
 
     }
