@@ -59,21 +59,12 @@ Execute a classe principal (`Loja`) diretamente na pasta **`pasta_poo`**:
 ### O fluxo de teste abaixo mostra a sequência de comandos de menu que devem ser digitados para realizar o CRUD completo, seguido por uma breve descrição da ação de confirmação esperada.
 
 # Menu Principal (MP): 
-1) Gerenciar Funcionários # Submenu (SM): 1) Cadastrar Funcionário
-2) Listar Funcionário
-3) Buscar Funcionário por id
-4) Buscar Funcionário por nome
-5) Atualizar Funcionário por id
-6) Atualizar Funcionário por nome
-7) Excluir Funcionário por id
-8) Excluir Funcionário por nome
-0) Voltar ao menu principal
-2) Gerenciar Produtos
-3) Gerenciar Clientes
-4) Cadastrar Cliente
-5) Cadastrar Produto
+1) Gerenciar Funcionários _ Submenu (SM): 1 = Cadastrar Funcionário, 2 = Listar Funcionário, 3 = Buscar Funcionário por id, 4 = Buscar Funcionário por nome, 5 = Atualizar Funcionário por id, 6 = Atualizar Funcionário por nome, 7 = Excluir Funcionário por id, 8 = Excluir Funcionário por nome, 0 = Voltar ao menu principal;
+2) Gerenciar Produtos _ Submenu (SM): 1 = Listar Produto, 2 = Buscar Produto por id, 3 = Buscar Produto por nome, 4 = Atualizar Produto por id, 5 = Atualizar Produto por nome, 6 = Excluir Produto por id, 7 =  Excluir Produto por nome, 0 = Voltar ao menu principal;
+3) Gerenciar Clientes _ Submenu (SM): 1 = Listar Cliente, 2 = Buscar Cliente por id, 3 = Buscar Cliente por nome, 4 = Atualizar Cliente por id, 5 = Atualizar Cliente por nome, 6 = Excluir Cliente por id, 7 =  Excluir Cliente por nome, 0 = Voltar ao menu principal;
+4) Cadastrar Cliente _ Submenu (SM): 1 = Cadastrar cliente, 0 = Voltar ao menu principal
+5) Cadastrar Produto _ Submenu (SM): 1 = Cadastrar produto, 0 = Voltar ao menu principal
 0) Sair
-# Submenu (SM): 1=Cadastrar, 2=Listar, 4=Atualizar, 5=Excluir, 0=Voltar
 
 # --- 1. CADASTRO MÍNIMO (CREATE) ---
 
