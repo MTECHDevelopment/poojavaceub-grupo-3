@@ -58,7 +58,21 @@ Execute a classe principal (`Loja`) diretamente na pasta **`pasta_poo`**:
 # ✅ Sequência de Teste (Mínima)
 ### O fluxo de teste abaixo mostra a sequência de comandos de menu que devem ser digitados para realizar o CRUD completo, seguido por uma breve descrição da ação de confirmação esperada.
 
-# Menu Principal (MP): 1=Funcionário, 2=Produto, 3=Cliente, 0=Sair
+# Menu Principal (MP): 
+1) Gerenciar Funcionários # Submenu (SM): 1) Cadastrar Funcionário
+2) Listar Funcionário
+3) Buscar Funcionário por id
+4) Buscar Funcionário por nome
+5) Atualizar Funcionário por id
+6) Atualizar Funcionário por nome
+7) Excluir Funcionário por id
+8) Excluir Funcionário por nome
+0) Voltar ao menu principal
+2) Gerenciar Produtos
+3) Gerenciar Clientes
+4) Cadastrar Cliente
+5) Cadastrar Produto
+0) Sair
 # Submenu (SM): 1=Cadastrar, 2=Listar, 4=Atualizar, 5=Excluir, 0=Voltar
 
 # --- 1. CADASTRO MÍNIMO (CREATE) ---
