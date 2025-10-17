@@ -68,7 +68,7 @@ java Loja
 3) Gerenciar Clientes _ Submenu (SM): 1 = Listar Cliente, 2 = Buscar Cliente por id, 3 = Buscar Cliente por nome, 4 = Atualizar Cliente por id, 5 = Atualizar Cliente por nome, 6 = Excluir Cliente por id, 7 =  Excluir Cliente por nome, 0 = Voltar ao menu principal;
 4) Cadastrar Cliente _ Submenu (SM): 1 = Cadastrar cliente, 0 = Voltar ao menu principal
 5) Cadastrar Produto _ Submenu (SM): 1 = Cadastrar produto, 0 = Voltar ao menu principal
-0) Sair
+0) Sair = 0
 
 # --- 1. CADASTRO MÍNIMO (CREATE) ---
 
