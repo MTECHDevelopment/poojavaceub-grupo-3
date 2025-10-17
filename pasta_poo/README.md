@@ -55,10 +55,10 @@ Certifique-se de ter o **JDK (Java Development Kit)** instalado em sua máquina.
 
 Execute a classe principal (`Loja`) diretamente na pasta **`pasta_poo`**:
 
-#✅ Sequência de Teste (Mínima)
-###O fluxo de teste abaixo mostra a sequência de comandos de menu que devem ser digitados para realizar o CRUD completo, seguido por uma breve descrição da ação de confirmação esperada.
+# ✅ Sequência de Teste (Mínima)
+### O fluxo de teste abaixo mostra a sequência de comandos de menu que devem ser digitados para realizar o CRUD completo, seguido por uma breve descrição da ação de confirmação esperada.
 
-# Menu Principal (MP): 1=Func, 2=Prod, 3=Cli, 0=Sair
+# Menu Principal (MP): 1=Funcionário, 2=Produto, 3=Cliente, 0=Sair
 # Submenu (SM): 1=Cadastrar, 2=Listar, 4=Atualizar, 5=Excluir, 0=Voltar
 
 # --- 1. CADASTRO MÍNIMO (CREATE) ---
@@ -66,39 +66,39 @@ Execute a classe principal (`Loja`) diretamente na pasta **`pasta_poo`**:
 # Cadastrar 2 Funcionários (ID 1 e ID 2)
 MP: 1
 SM: 1  # (Digitar dados do Funcionário 1)
+MP: 1
 SM: 1  # (Digitar dados do Funcionário 2)
-SM: 0  # Voltar ao MP
 
 # Cadastrar 2 Produtos (ID 1 e ID 2)
-MP: 2
+MP: 5
 SM: 1  # (Digitar dados do Produto 1)
+MP: 5
 SM: 1  # (Digitar dados do Produto 2)
-SM: 0  # Voltar ao MP
 
 # Cadastrar 2 Clientes (ID 1 e ID 2)
-MP: 3
+MP: 4
 SM: 1  # (Digitar dados do Cliente 1)
+MP: 4
 SM: 1  # (Digitar dados do Cliente 2)
-SM: 0  # Voltar ao MP
 
 
 # --- 2. LISTAGEM INICIAL (READ) ---
-MP: 1 -> SM: 2 # (Confirmar Funcs 1 e 2)
-MP: 2 -> SM: 2 # (Confirmar Prods 1 e 2)
-MP: 3 -> SM: 2 # (Confirmar Clientes 1 e 2)
+MP: 1 -> SM: 2 # (Confirmar Funcionários 1 e 2)
+MP: 2 -> SM: 1 # (Confirmar Produtos 1 e 2)
+MP: 3 -> SM: 1 # (Confirmar Clientes 1 e 2)
 
 
 # --- 3. ATUALIZAÇÃO (UPDATE) ---
 
 # Atualizar ID 1 de cada entidade
-MP: 1 -> SM: 4 # (Digitar ID 1 e novos dados)
+MP: 1 -> SM: 5 # (Digitar ID 1 e novos dados)
 MP: 2 -> SM: 4 # (Digitar ID 1 e novos dados)
 MP: 3 -> SM: 4 # (Digitar ID 1 e novos dados)
 
 # Confirmação de Atualização
-MP: 1 -> SM: 2 # (Confirmar alteração do Func ID 1)
-MP: 2 -> SM: 2 # (Confirmar alteração do Prod ID 1)
-MP: 3 -> SM: 2 # (Confirmar alteração do Cli ID 1)
+MP: 1 -> SM: 2 # (Confirmar alteração do Funcionário ID 1)
+MP: 2 -> SM: 1 # (Confirmar alteração do Produto ID 1)
+MP: 3 -> SM: 1 # (Confirmar alteração do Cliente ID 1)
 
 
 # --- 4. BUSCA (READ por ID) ---
@@ -109,14 +109,14 @@ MP: 1 -> SM: 3 # (Digitar ID 99) -> Saída: ID não encontrado
 # --- 5. REMOÇÃO (DELETE) ---
 
 # Excluir ID 2 de cada entidade
-MP: 1 -> SM: 5 # (Digitar ID 2) -> Saída: Sucesso/True
-MP: 2 -> SM: 5 # (Digitar ID 2) -> Saída: Sucesso/True
-MP: 3 -> SM: 5 # (Digitar ID 2) -> Saída: Sucesso/True
+MP: 1 -> SM: 7 # (Digitar ID 2) -> Saída: Funcionário excluído com sucesso
+MP: 2 -> SM: 6 # (Digitar ID 2) -> Saída: Produto excluído com sucesso
+MP: 3 -> SM: 6 # (Digitar ID 2) -> Saída: Cliente excluído com sucesso
 
 # Confirmação de Exclusão (Apenas ID 1 deve sobrar)
-MP: 1 -> SM: 2 # (Confirmar que só Func ID 1 está na lista)
-MP: 2 -> SM: 2 # (Confirmar que só Prod ID 1 está na lista)
-MP: 3 -> SM: 2 # (Confirmar que só Cli ID 1 está na lista)
+MP: 1 -> SM: 2 # (Confirmar que só Funcionário ID 1 está na lista)
+MP: 2 -> SM: 1 # (Confirmar que só Produto ID 1 está na lista)
+MP: 3 -> SM: 1 # (Confirmar que só Cliente ID 1 está na lista)
 
 
 # --- 6. SAIR ---
