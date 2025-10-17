@@ -57,6 +57,7 @@ Execute a classe principal (`Loja`) diretamente na pasta **`pasta_poo`**:
 ```bash
 # Na pasta_poo
 java Loja
+```
 
 # ✅ Sequência de Teste (Mínima)
 ### O fluxo de teste abaixo mostra a sequência de comandos de menu que devem ser digitados para realizar o CRUD completo, seguido por uma breve descrição da ação de confirmação esperada.
