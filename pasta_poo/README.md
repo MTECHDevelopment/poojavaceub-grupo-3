@@ -54,6 +54,9 @@ Certifique-se de ter o **JDK (Java Development Kit)** instalado em sua máquina.
 ### 3. Execução
 
 Execute a classe principal (`Loja`) diretamente na pasta **`pasta_poo`**:
+```bash
+# Na pasta_poo
+java Loja
 
 # ✅ Sequência de Teste (Mínima)
 ### O fluxo de teste abaixo mostra a sequência de comandos de menu que devem ser digitados para realizar o CRUD completo, seguido por uma breve descrição da ação de confirmação esperada.
@@ -126,9 +129,5 @@ MP: 3 -> SM: 1 # (Confirmar que só Cliente ID 1 está na lista)
 
 # --- 6. SAIR ---
 MP: 0 # Encerra o programa
-
-```bash
-# Na pasta_poo
-java Loja
 
 
