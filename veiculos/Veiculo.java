@@ -59,7 +59,7 @@ public abstract class Veiculo {
     abstract Double calcularDiariaComDesconto();
 
     public void exibirResumo() {
-        System.out.println("Dados do veículo: \n" + "Placa - " + getPlaca() + "\nMarca - " + getMarca() + "\nModelo - " + getModelo() + "\nValor diária - " + getValorDiaria() + "Status do veículo - " + getStatus());
+        System.out.println("Dados do veículo: \n" + "Placa - " + getPlaca() + "\nMarca - " + getMarca() + "\nModelo - " + getModelo() + "\nValor diária - " + getValorDiaria() + "\nStatus do veículo - " + getStatus());
     }
 
 }
