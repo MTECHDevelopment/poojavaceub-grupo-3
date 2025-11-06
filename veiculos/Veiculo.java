@@ -8,7 +8,7 @@ public abstract class Veiculo {
     private Double valorDiaria;
     private StatusVeiculo status;
 
-    public Veiculo(String placa, String marca, String modelo, Double valorDiaria){
+    public Veiculo(String placa, String marca, String modelo, Double valorDiaria, StatusVeiculo status){
         this.placa = placa;
         this.marca = marca;
         this.modelo = modelo;
@@ -28,8 +28,8 @@ public abstract class Veiculo {
         return modelo;
     }
 
-    public String getValorDiaria() {
-        return placa;
+    public Double getValorDiaria() {
+        return valorDiaria;
     }
 
     public StatusVeiculo getStatus() {
