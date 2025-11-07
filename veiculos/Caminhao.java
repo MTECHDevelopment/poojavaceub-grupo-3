@@ -1,7 +1,7 @@
 public class Caminhao extends Veiculo implements Locavel{
     private String pesoSuportavel;
 
-    public Caminhao(String placa, String marca, String modelo, Double valorDiaria, StatusVeiculo status, String pesoSuportavel){
+    public Caminhao(String placa, String marca, String modelo, double valorDiaria, StatusVeiculo status, String pesoSuportavel){
         super(placa, marca, modelo, valorDiaria, status);
         this.pesoSuportavel = pesoSuportavel;
     }
@@ -15,7 +15,7 @@ public class Caminhao extends Veiculo implements Locavel{
     }
 
     @Override 
-    public Double calcularDiariaComDesconto() {
+    public double calcularDiariaComDesconto() {
         System.out.println("O preço do veículo é de: " + getValorDiaria() * 1.15);
         return getValorDiaria() * 1.15;
     }

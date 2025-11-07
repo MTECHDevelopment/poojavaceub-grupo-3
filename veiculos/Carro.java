@@ -1,7 +1,7 @@
 public class Carro extends Veiculo implements Locavel{
     private String quantidadePassageiros;
 
-    public Carro(String placa, String marca, String modelo, Double valorDiaria, StatusVeiculo status, String quantidadePassageiros){
+    public Carro(String placa, String marca, String modelo, double valorDiaria, StatusVeiculo status, String quantidadePassageiros){
         super(placa, marca, modelo, valorDiaria, status);
         this.quantidadePassageiros = quantidadePassageiros;
     }
@@ -15,7 +15,7 @@ public class Carro extends Veiculo implements Locavel{
     }
 
     @Override 
-    public Double calcularDiariaComDesconto() {
+    public double calcularDiariaComDesconto() {
         System.out.println("Parabéns, agora o veículo custa: " + getValorDiaria() * 0.90);
         System.out.println("Você conseguiu 10% de desconto!");
         return getValorDiaria() * 0.90;

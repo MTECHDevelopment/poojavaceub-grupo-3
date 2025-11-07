@@ -2,10 +2,10 @@ public abstract class Veiculo {
     private String placa;
     private String marca;
     private String modelo;
-    private Double valorDiaria;
+    private double valorDiaria;
     private StatusVeiculo status;
 
-    public Veiculo(String placa, String marca, String modelo, Double valorDiaria, StatusVeiculo status){
+    public Veiculo(String placa, String marca, String modelo, double valorDiaria, StatusVeiculo status){
         this.placa = placa;
         this.marca = marca;
         this.modelo = modelo;
@@ -53,7 +53,7 @@ public abstract class Veiculo {
         this.status = status;
     }
 
-    abstract Double calcularDiariaComDesconto();
+    abstract double calcularDiariaComDesconto();
 
     public void exibirResumo() {
         System.out.println("Dados do veículo: \n" + "Placa - " + getPlaca() + "\nMarca - " + getMarca() + "\nModelo - " + getModelo() + "\nValor diária - " + getValorDiaria() + "\nStatus do veículo - " + getStatus());

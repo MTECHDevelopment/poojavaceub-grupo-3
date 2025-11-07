@@ -1,7 +1,7 @@
 public class Moto extends Veiculo implements Locavel{
     private int cilindradas;
 
-    public Moto(String placa, String marca, String modelo, Double valorDiaria, StatusVeiculo status, int cilindradas){
+    public Moto(String placa, String marca, String modelo, double valorDiaria, StatusVeiculo status, int cilindradas){
         super(placa, marca, modelo, valorDiaria, status);
         this.cilindradas = cilindradas;
     }
@@ -15,7 +15,7 @@ public class Moto extends Veiculo implements Locavel{
     }
 
     @Override 
-    public Double calcularDiariaComDesconto() {
+    public double calcularDiariaComDesconto() {
         if (cilindradas <= 200) {
             System.out.println("Parabéns, agora o veículo custa: " + getValorDiaria() * 0.95);
             System.out.println("Você conseguiu 5% de desconto!");
