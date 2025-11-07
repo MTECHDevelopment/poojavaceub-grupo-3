@@ -25,7 +25,7 @@ public abstract class Veiculo {
         return modelo;
     }
 
-    public Double getValorDiaria() {
+    public double getValorDiaria() {
         return valorDiaria;
     }
 
