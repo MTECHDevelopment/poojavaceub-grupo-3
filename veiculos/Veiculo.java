@@ -53,7 +53,7 @@ public abstract class Veiculo {
     }
 
     public void setStatus(StatusVeiculo status) {
-        this.status = StatusVeiculo.DISPONIVEL;
+        this.status = status;
     }
 
     abstract Double calcularDiariaComDesconto();
