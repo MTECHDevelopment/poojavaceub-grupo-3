@@ -2,7 +2,7 @@
 ```mermaid
 classDiagram
   class Fornecedor{
-    - idFormecedor: int
+    - idFornecedor: int
     - fornecedor: string
     - telefone: string
     - cnpj: string
